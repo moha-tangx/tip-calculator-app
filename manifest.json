@@ -1,0 +1,22 @@
+{
+  "name": "Tip-calculator app",
+  "short_name": "tip-cal",
+  "start_url": "./index.html",
+  "description": "calculate tip on the fly",
+  "serviceworker": {
+    "src": "./serviceWorker.js"
+  },
+  "icons": [
+    {
+      "src": "./images/logo.svg",
+      "sizes": "87x54",
+      "type": "image/svg"
+    }
+  ],
+  "theme_color": "#26c0ab",
+  "background_color": "#7f9c9f",
+  "display": "standalone",
+  "display_override": ["fullscreen", "minimal-ui"],
+  "orientation": "portrait",
+  "protocol_handlers": []
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="tip-calculator-app /tip calculator /calculator /tip">
+  <meta name="theme-color" content="#26c0ab">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>tip-calculator-app</title>
+</head>
+<body>
+  <main>
+    <div><img src="./images/logo.svg" alt="SPLITTER"></div> 
+    <div class="calculator">
+      <div class="left">
+        <div class="bill">
+          <span>Bill</span> <span class="err-msg"></span>
+          <div class="input">
+            <img src="./images/icon-dollar.svg" alt="icon-dollar">
+            <input type="text" class="bill-input">
+          </div>
+        </div>
+          <div class="tip-input">
+            <span>Select Tip %</span>
+            <div class="tip-percent">
+              <input type="button" value="5%">
+              <input type="button" value="10%">
+              <input type="button" value="15%">
+              <input type="button" value="25%">
+              <input type="button" value="50%">
+              <input class="custom-tip-input" type="text" placeholder="custom">
+            </div>
+          </div>
+          <div >
+            <span>Number Of People</span><span class="err-msg"></span>
+            <div class="input"><img src="./images/icon-person.svg" alt="icon-person">
+              <input type="text" class="people-input">
+            </div>
+          </div>
+      </div>
+      <div class="right">
+        <div class="total">
+          <div class="tip-amount">
+            <div class="key">
+              <span>tip amount</span><br><span>/person</span>
+            </div>
+            <span class="value">$0.00</span>
+          </div>
+          <div class="total-per-person">
+            <div class="key">
+              <span>total</span><br><span>/person</span>
+            </div>
+            <span class="value">$0.00</span>
+            </div>
+          </div>
+          <button id="reset">reset</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="./index.js"></script>
+</body>
+</html>

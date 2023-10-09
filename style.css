@@ -1,0 +1,301 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    color-scheme: light dark;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-display: fallback;
+    font-family: myFont, system-ui;
+    user-select: none;
+}
+
+@font-face {
+    font-family: myFont;
+    src: url("https://fonts.google.com/specimen/Space+Mono");
+}
+
+:root {
+    /*  Primary  */
+    --Strong-cyan: hsl(172, 67%, 45%);
+
+    /*  Neutral  */
+
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(186, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+
+    /* redi */
+    --rounded: .5rem;
+    --circle: 100%;
+}
+
+main {
+    align-items: center;
+    background-color: var(--Light-grayish-cyan);
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+main>span {
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.calculator {
+    align-items: center;
+    background-color: var(--Very-light-grayish-cyan);
+    border-radius: 1rem;
+    box-shadow: 2px 0px 20px 0px var(--Grayish-cyan);
+    display: flex;
+    gap: 2%;
+    height: fit-content;
+    justify-content: center;
+    max-width: 98vw;
+    padding: 1.5rem;
+    min-width: 60%;
+}
+
+.calculator>* {
+    border-radius: inherit;
+    flex: 1;
+    height: 100%;
+    padding: 2%;
+}
+
+.right {
+    background-color: var(--Very-dark-cyan);
+}
+
+.left {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left>* {
+    width: 100%;
+    margin-top: 6%;
+}
+
+.left>* span {
+    color: var(--Very-dark-cyan);
+    font-weight: 500;
+    padding: 2%;
+}
+
+.input {
+    align-items: center;
+    background-color: var(--Very-light-grayish-cyan);
+    border: 2px solid var(--Strong-cyan);
+    border-radius: 4px;
+    display: flex;
+    margin-top: 2%;
+    overflow: hidden;
+    padding: 0 4%;
+    text-align: right;
+    width: 100%;
+}
+
+.input input {
+    background-color: inherit;
+    caret-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    border: none;
+    flex: 1;
+    font-size: 1.2rem;
+    font-weight: 700;
+    height: 100%;
+    outline: none;
+    padding: 2%;
+    text-align: right;
+}
+
+input:focus {
+    outline: 2px solid transparent;
+}
+
+.tip-percent {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4%;
+}
+
+.tip-percent>input {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 5px;
+    border: none;
+    color: var(--Very-light-grayish-cyan);
+    cursor: pointer;
+    flex: 1;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 4%;
+    min-width: 30%;
+    outline: 2px solid transparent;
+    padding: 2% 4%;
+}
+
+.tip-percent input:hover {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+input.selected {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.tip-percent input[type=text] {
+    background-color: var(--Very-light-grayish-cyan);
+    caret-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    outline: 2px solid var(--Strong-cyan);
+    padding: calc(2% - 2px) 1%;
+    text-align: right;
+}
+
+.tip-percent input[type=text]::placeholder {
+    color: var(--Very-dark-cyan);
+}
+
+.bill-input,
+.people-input {
+    position: relative;
+}
+
+.err {
+    border: 2px solid #f33;
+}
+
+span.err-msg {
+    color: #f33;
+    position: absolute;
+    right: 0;
+    top: -5%;
+}
+
+div:has(.err-msg) {
+    position: relative;
+}
+
+.right {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5%;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.tip-amount,
+.total-per-person {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.key span {
+    color: var(--Very-light-grayish-cyan);
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.key br+span {
+    color: var(--Grayish-cyan);
+    font-size: 14px;
+}
+
+.value {
+    color: var(--Strong-cyan);
+    flex: 1;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: right;
+}
+
+button {
+    background: var(--Strong-cyan);
+    border: none;
+    border-radius: 4px;
+    color: var(--Very-dark-cyan);
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 2% 0;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+button:hover {
+    background-color: var(--Light-grayish-cyan);
+    cursor: pointer;
+}
+
+@media only screen and (max-width:500px) {
+    main {
+        height: fit-content;
+    }
+
+    main>div>img {
+        padding-top: 2rem;
+    }
+
+    .calculator {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .calculator>* {
+        width: 100%;
+    }
+
+    .left {
+        padding: 0;
+    }
+
+    .right {
+        gap: 2.5rem;
+    }
+
+    .tip-percent>input {
+        min-width: 45%;
+        padding: 4%;
+    }
+
+    .tip-percent input[type=text],
+    .input {
+        padding: 1% auto;
+        outline-color: transparent;
+        border: 2px solid transparent;
+        background-color: var(--Light-grayish-cyan);
+    }
+
+    .tip-percent input[type=text] {
+        padding: 3.2% 2%;
+    }
+
+    button {
+        padding: 5%;
+    }
+}
