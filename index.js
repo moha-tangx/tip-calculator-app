@@ -1,5 +1,4 @@
 "use strict";
-// @ts-check
 
 const bill = document.querySelector("input.bill-input");
 const people = document.querySelector(".people-input");
@@ -102,12 +101,18 @@ document.getElementById("reset").addEventListener("click", () => {
 });
 
 // registering serviceWorker if browser supports it
-if ("serviceWorker" in navigator) {
-  try {
-    navigator.serviceWorker.register("./serviceWorker.js");
-  } catch (error) {
-    console.log(
-      `something  went wrong service serviceWorker not registered ${error}`
-    );
+(async () => {
+  const onLocalHost =
+    window.location.hostname == "localhost" ||
+    window.location.hostname == "127.0.0.1";
+  if ("serviceWorker" in navigator && !onLocalHost) {
+    try {
+      await navigator.serviceWorker.register("./serviceWorker.js");
+    } catch (error) {
+      const message =
+        "something  went wrong service serviceWorker not registered";
+      console.log(`${message} : ${error}`);
+      alert(message);
+    }
   }
-}
+})();

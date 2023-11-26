@@ -9,6 +9,8 @@ let resources = [
   "./index.js",
   "./images/icon-dollar.svg",
   "./images/icon-person.svg",
+  "./images/Moha_tangx logo.jpg",
+  "./images/app-icon.png",
   "./images/logo.svg",
   "./manifest.json",
 ];
@@ -17,7 +19,7 @@ let cacheResources = async (resources) => {
   cache.addAll(resources);
 };
 self.addEventListener("install", async (e) => {
-  e.waitUntil(cacheResources(resources));
+  await e.waitUntil(cacheResources(resources));
 });
 let cacheFirst = async (request) => {
   let cached = await caches.match(request);
