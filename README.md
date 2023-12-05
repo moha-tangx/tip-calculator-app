@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/moha-tangx/tip-calculator-app)
+- Live Site URL: [Add live site URL here](https://moha-tangx.github.io/tip-calculator-app/)
 
 ## My process
 - #### finihed with the marup first.
@@ -51,6 +51,6 @@ there is actually nothing that is new to me aboutthis this project. It's a mini 
 
 ## Author
 
-- Website - [moha_tangx](https://www.your-site.com)
-- Frontend Mentor - [@moha_ttangx](https://www.frontendmentor.io/profile/moha_tangx)
-- Twitter - [@moha_tangx](https://www.twitter.com/moha_tangx)
+<!-- - Website - [moha_tangx](https://www.your-site.com) -->
+- Frontend Mentor - [@moha_tangx](https://www.frontendmentor.io/profile/moha-tangx)
+- Twitter - [@moha_tangx](https://twitter.com/moha_tangx)

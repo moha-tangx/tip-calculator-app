@@ -1,12 +1,10 @@
 "use strict";
 
-const bill = document.querySelector("input.bill-input");
-const people = document.querySelector(".people-input");
-const custom_tip = document.querySelector(".custom-tip-input");
-const input = document.querySelectorAll(".input")[1];
-const tip_option = document.querySelectorAll(
-  ".tip-percent input[type = button]"
-);
+const bill = document.querySelector("input.bill-input"),
+  people = document.querySelector(".people-input"),
+  custom_tip = document.querySelector(".custom-tip-input"),
+  input = document.querySelectorAll(".input")[1],
+  tip_option = document.querySelectorAll(".tip-percent input[type = button]");
 let tip;
 
 // clearing all the optional tip percentage selection
